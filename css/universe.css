@@ -1,5 +1,5 @@
 /* 背景宇宙星光  */
-#universe{
+#universe {
     display: block;
     position: fixed;
     margin: 0;
@@ -14,3 +14,40 @@
     /* 这个是调置顶的优先级的，-1在文章页下面，背景上面，个人推荐这种 */
     z-index: -1;
 }
+
+
+/*哔哩哔哩文字样式*/
+.bangumi-tab {
+    color: black !important;
+}
+
+.bangumi-active {
+    background-color: #47b6ff !important;
+}
+
+.bangumi-info-items {
+    color: black !important;
+}
+
+.bangumi-info-item {
+    border-right: 1px solid #002a68 !important;
+}
+
+/*哔哩哔哩文字样式*/
+
+
+/*音乐播放器Aplayer*/
+/*.aplayer.aplayer-fixed .aplayer-body {*/
+/*    position: fixed!important;*/
+/*    top: 80px!important;*/
+/*    right: 0!important;*/
+/*    left: auto!important;*/
+/*}*/
+
+/*音乐播放器Aplayer*/
+
+
+
+
+
+

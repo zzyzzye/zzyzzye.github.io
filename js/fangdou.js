@@ -63,3 +63,64 @@ document.addEventListener("keydown", function(event) {
         });
     }
 });
+
+
+// debounce 函数的实现
+// function debounce(func, wait) {
+//     let timeout;
+//     return function () {
+//         const context = this;
+//         const args = arguments;
+//         clearTimeout(timeout);
+//         timeout = setTimeout(() => {
+//             func.apply(context, args);
+//         }, wait);
+//     };
+// }
+//
+// // 在页面加载时创建Vue实例
+// document.addEventListener("DOMContentLoaded", function () {
+//     new Vue({
+//         created: function () {
+//             document.addEventListener("copy", debounce(function () {
+//                 this.$notify({
+//                     title: "哎嘿！复制成功👻",
+//                     message: "若要转载最好保留原文链接哦！",
+//                     position: 'top-left',
+//                     offset: 50,
+//                     showClose: true,
+//                     type: "success",
+//                     duration: 5000
+//                 });
+//             }, 300));
+//
+//             document.addEventListener("contextmenu", function (event) {
+//                 event.preventDefault();
+//                 this.$notify({
+//                     title: "发现你了😗",
+//                     message: "小伙子老实点👿",
+//                     position: 'top-left',
+//                     offset: 50,
+//                     showClose: true,
+//                     type: "warning",
+//                     duration: 5000
+//                 });
+//             });
+//
+//             document.addEventListener("keydown", function (event) {
+//                 if (event.keyCode === 123) {
+//                     event.preventDefault();
+//                     this.$notify({
+//                         title: "发现你了😗",
+//                         message: "小伙子老实点👿",
+//                         position: 'top-left',
+//                         offset: 50,
+//                         showClose: true,
+//                         type: "warning",
+//                         duration: 5000
+//                     });
+//                 }
+//             });
+//         }
+//     });
+// });
