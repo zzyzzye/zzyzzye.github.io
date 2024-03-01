@@ -50,6 +50,31 @@
     
     
     <entry>
+      <title>MySQL8.0安装</title>
+      <link href="/2024/02/26/MySQL%E7%9A%84%E5%AE%89%E8%A3%85/"/>
+      <url>/2024/02/26/MySQL%E7%9A%84%E5%AE%89%E8%A3%85/</url>
+      
+        <content type="html"><![CDATA[<h2 id="MySQL下载"><a href="#MySQL下载" class="headerlink" title="MySQL下载"></a>MySQL下载</h2><ul><li>首先确认自己的操作系统是64位还是32位。</li></ul><ol><li><p>首先<a href="https://dev.mysql.com/downloads/">访问官网</a>下载MySQL服务。<br><img src="/assets/md_img/mysql下载png.png"></p></li><li><p>选择MySQL版本<br><img src="/assets/md_img/mysql版本.png"></p><div class="note info flat"><p>我现在的版本是 8.3.0 ，所以本文选择<strong><code>MySQL 8.3.0</code></strong></p></div></li><li><p>点击<strong><code>No thanks, just start my download.</code></strong>以跳过注册流程直接下载</p></li></ol><h2 id="MySQL安装"><a href="#MySQL安装" class="headerlink" title="MySQL安装"></a>MySQL安装</h2><ol><li><p>找到下载好的安装包文件目录并点击</p></li><li><p>开始安装</p></li><li><p>进入页面后选择最后一个自定义选项之后点击next</p></li></ol>]]></content>
+      
+      
+      <categories>
+          
+          <category> 数据库 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> MySQL </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>Vue-cli</title>
       <link href="/2024/02/26/Vue-cli/"/>
       <url>/2024/02/26/Vue-cli/</url>
@@ -82,31 +107,6 @@
           
       </categories>
       
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>MySQL8.0安装</title>
-      <link href="/2024/02/26/MySQL%E7%9A%84%E5%AE%89%E8%A3%85/"/>
-      <url>/2024/02/26/MySQL%E7%9A%84%E5%AE%89%E8%A3%85/</url>
-      
-        <content type="html"><![CDATA[<h2 id="MySQL下载"><a href="#MySQL下载" class="headerlink" title="MySQL下载"></a>MySQL下载</h2><ul><li>首先确认自己的操作系统是64位还是32位。</li></ul><ol><li><p>首先<a href="https://dev.mysql.com/downloads/">访问官网</a>下载MySQL服务。<br><img src="/assets/md_img/mysql下载png.png"></p></li><li><p>选择MySQL版本<br><img src="/assets/md_img/mysql版本.png"></p><div class="note info flat"><p>我现在的版本是 8.3.0 ，所以本文选择<strong><code>MySQL 8.3.0</code></strong></p></div></li><li><p>点击<strong><code>No thanks, just start my download.</code></strong>以跳过注册流程直接下载</p></li></ol><h2 id="MySQL安装"><a href="#MySQL安装" class="headerlink" title="MySQL安装"></a>MySQL安装</h2><ol><li><p>找到下载好的安装包文件目录并点击</p></li><li><p>开始安装</p></li><li><p>进入页面后选择最后一个自定义选项之后点击next</p></li></ol>]]></content>
-      
-      
-      <categories>
-          
-          <category> 数据库 </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> MySQL </tag>
-            
-        </tags>
       
     </entry>
     
