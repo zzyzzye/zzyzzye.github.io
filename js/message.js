@@ -1,1 +1,21 @@
-var titleTime,OriginTitile=document.title;document.addEventListener("visibilitychange",(function(){document.hidden?(document.title="Where You Now?",clearTimeout(titleTime)):(document.title="o(*￣▽￣*)ブ",titleTime=setTimeout((function(){document.title=OriginTitile}),2e3))}));
+//动态标题
+var OriginTitile = document.title;
+var titleTime;
+document.addEventListener('visibilitychange', function () {
+    if (document.hidden) {
+        //离开当前页面时标签显示内容
+        document.title = 'Where You Now?';
+        clearTimeout(titleTime);
+    } else {
+        //返回当前页面时标签显示内容
+        document.title = 'o(*￣▽￣*)ブ';
+        //两秒后变回正常标题
+        titleTime = setTimeout(function () {
+            document.title = OriginTitile;
+        }, 2000);
+    }
+});
+
+
+
+
