@@ -50,25 +50,6 @@
     
     
     <entry>
-      <title>Vue-cli</title>
-      <link href="/2024/02/26/Vue-cli/"/>
-      <url>/2024/02/26/Vue-cli/</url>
-      
-        <content type="html"><![CDATA[<h2 id="Vue-cli"><a href="#Vue-cli" class="headerlink" title="Vue-cli"></a>Vue-cli</h2>]]></content>
-      
-      
-      <categories>
-          
-          <category> Vue </category>
-          
-      </categories>
-      
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>MySQL8.0安装</title>
       <link href="/2024/02/26/MySQL%E7%9A%84%E5%AE%89%E8%A3%85/"/>
       <url>/2024/02/26/MySQL%E7%9A%84%E5%AE%89%E8%A3%85/</url>
@@ -88,6 +69,25 @@
             <tag> MySQL </tag>
             
         </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Vue-cli</title>
+      <link href="/2024/02/26/Vue-cli/"/>
+      <url>/2024/02/26/Vue-cli/</url>
+      
+        <content type="html"><![CDATA[<h2 id="Vue-cli"><a href="#Vue-cli" class="headerlink" title="Vue-cli"></a>Vue-cli</h2>]]></content>
+      
+      
+      <categories>
+          
+          <category> Vue </category>
+          
+      </categories>
+      
       
     </entry>
     
