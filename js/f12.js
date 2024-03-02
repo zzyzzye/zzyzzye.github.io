@@ -1,1 +1,0 @@
-new Vue({created(){document.addEventListener("contextmenu",(e=>{this.showMessage(),e.preventDefault()})),document.addEventListener("keydown",(e=>{"F12"===e.key&&(this.showMessage(),e.preventDefault())}))},methods:{showMessage(){this.$notify({title:"发现你了😗",message:"你已被监视",position:"top-left",offset:50,showClose:!0,type:"warning",duration:5e3})}}});
