@@ -11,7 +11,8 @@ function createtime() {
     var g = (now - o) / 1e3 - 86400 * r - 3600 * s - 60 * l, b = Math.round(g);
     1 == String(b).length && (b = "0" + b);
     let c = "";
-    c = s < 18 && s >= 9 ? `<img class="boardsign" src="https://sourcebucket.s3.bitiful.net/badge/F小屋-下班休息啦.svg" title="下班了就该开开心心地玩耍~"><br> <div style="font-size:13px;font-weight:bold">本站居然运行了 ${r} 天 ${s} 小时 ${l} 分 ${b} 秒 <i id="heartbeat" class='fas fa-heartbeat'></i>` : `<img class='boardsign' src='https://sourcebucket.s3.bitiful.net/badge/F小屋-下班休息啦.svg' title='下班了就该开开心心地玩耍~'><br> <div style="font-size:13px;font-weight:bold">本站已经运行了 ${r} 天 ${s} 小时 ${l} 分 ${b} 秒 <i id="heartbeat" class='fas fa-heartbeat'></i>`, document.getElementById("workboard") && (document.getElementById("workboard").innerHTML = c)
+    c = s < 18 && s >= 9 ? 18 : 9
+        // `<img class="boardsign" src="https://sourcebucket.s3.bitiful.net/badge/M小屋-下班休息啦.svg" title="下班了就该开开心心地玩耍~"><br> <div style="font-size:13px;font-weight:bold">本站居然运行了 ${r} 天 ${s} 小时 ${l} 分 ${b} 秒 <i id="heartbeat" class='fas fa-heartbeat'></i>` : `<img class='boardsign' src='https://sourcebucket.s3.bitiful.net/badge/F小屋-下班休息啦.svg' title='下班了就该开开心心地玩耍~'><br> <div style="font-size:13px;font-weight:bold">本站已经运行了 ${r} 天 ${s} 小时 ${l} 分 ${b} 秒 <i id="heartbeat" class='fas fa-heartbeat'></i>`, document.getElementById("workboard") && (document.getElementById("workboard").innerHTML = c)
 }
 
 setInterval((() => {
