@@ -91,91 +91,50 @@ let msg = "这都被你找到了？记住要遵循GPL协议哦！"
 
 let resizing = false; // 标记是否处于分辨率变化状态
 
-window.addEventListener("resize", function() {
-    // 如果已经在分辨率变化状态下，则退出函数
-    if (resizing) {
-        return;
-    }
-
-    let currentWidth = window.innerWidth;
-    let currentHeight = window.innerHeight;
-
-    if (Math.abs(currentWidth - beforeWidth) > 20 || Math.abs(currentHeight - beforeHeight) > 20) {
-        resizing = true; // 进入分辨率变化状态
-        // 分辨率变化超过阈值，弹出提示信息
-        new Vue({
-            data: function () {
-                this.$notify({
-                    title: "请不要打开开发者工具👿",
-                    message: msg,
-                    position: 'top-left',
-                    offset: 50,
-                    showClose: true,
-                    type: "error",
-                    duration: 5000 // 0表示永久显示
-                });
-            }
-        });
-    }
-});
-
-
-// debounce 函数的实现
-// function debounce(func, wait) {
-//     let timeout;
-//     return function () {
-//         const context = this;
-//         const args = arguments;
-//         clearTimeout(timeout);
-//         timeout = setTimeout(() => {
-//             func.apply(context, args);
-//         }, wait);
-//     };
-// }
+// window.addEventListener("resize", function() {
+//     // 如果已经在分辨率变化状态下，则退出函数
+//     if (resizing) {
+//         return;
+//     }
 //
-// // 在页面加载时创建Vue实例
-// document.addEventListener("DOMContentLoaded", function () {
-//     new Vue({
-//         created: function () {
-//             document.addEventListener("copy", debounce(function () {
+//     let currentWidth = window.innerWidth;
+//     let currentHeight = window.innerHeight;
+//
+//     if (Math.abs(currentWidth - beforeWidth) > 20 || Math.abs(currentHeight - beforeHeight) > 20) {
+//         resizing = true; // 进入分辨率变化状态
+//         // 分辨率变化超过阈值，弹出提示信息
+//         new Vue({
+//             data: function () {
 //                 this.$notify({
-//                     title: "哎嘿！复制成功👻",
-//                     message: "若要转载最好保留原文链接哦！",
+//                     title: "请不要打开开发者工具👿",
+//                     message: msg,
 //                     position: 'top-left',
 //                     offset: 50,
 //                     showClose: true,
-//                     type: "success",
-//                     duration: 5000
+//                     type: "error",
+//                     duration: 5000 // 0表示永久显示
 //                 });
-//             }, 300));
-//
-//             document.addEventListener("contextmenu", function (event) {
-//                 event.preventDefault();
-//                 this.$notify({
-//                     title: "发现你了😗",
-//                     message: "小伙子老实点👿",
-//                     position: 'top-left',
-//                     offset: 50,
-//                     showClose: true,
-//                     type: "warning",
-//                     duration: 5000
-//                 });
-//             });
-//
-//             document.addEventListener("keydown", function (event) {
-//                 if (event.keyCode === 123) {
-//                     event.preventDefault();
-//                     this.$notify({
-//                         title: "发现你了😗",
-//                         message: "小伙子老实点👿",
-//                         position: 'top-left',
-//                         offset: 50,
-//                         showClose: true,
-//                         type: "warning",
-//                         duration: 5000
-//                     });
-//                 }
-//             });
-//         }
-//     });
+//             }
+//         });
+//     }
 // });
+
+setInterval(function () {
+    check()
+}, 1000);
+var check = function () {
+    function doCheck(a) {
+        if (("" + a / a)["length"] !== 1 || a % 20 === 0) {
+            (function () {}
+                ["constructor"]("debugger")())
+        } else {
+            (function () {}
+                ["constructor"]("debugger")())
+        }
+        doCheck(++a)
+    }
+    try {
+        doCheck(0)
+    } catch (err) {}
+};
+check();
