@@ -21,16 +21,46 @@
     color: black !important;
 }
 
+[data-theme="dark"] .bangumi-tab {
+    color: white !important;
+}
+
 .bangumi-active {
     background-color: #47b6ff !important;
+}
+
+[data-theme="dark"].bangumi-active {
+    background-color: black !important;
 }
 
 .bangumi-info-items {
     color: black !important;
 }
 
+[data-theme="dark"] .bangumi-info-items {
+    color: white !important;
+}
+
 .bangumi-info-item {
     border-right: 1px solid #002a68 !important;
+}
+
+
+.bangumi-pagination a:hover {
+    background-color: #47b6ff !important;
+    color: white !important;
+}
+
+.bangumi-button {
+    color: black !important;
+}
+
+[data-theme="dark"] .bangumi-button {
+    color: white !important;
+}
+
+#article-container a {
+    text-decoration: none !important;
 }
 
 /*哔哩哔哩文字样式*/
