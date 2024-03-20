@@ -51,3 +51,4 @@ if (window.localStorage.getItem("fpson") == undefined || window.localStorage.get
 }
 
 
+console.log = function () {}

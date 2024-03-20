@@ -1,0 +1,20 @@
+body {
+    cursor:url(../mouse/default.cur),
+    default;
+}
+a,
+img {
+    cursor:url(../mouse/pointer.cur),
+    default;
+}
+
+.input-text {
+    cursor: url(../mouse/text.cur),
+    default;
+}
+
+.wait {
+    cursor: url(../mouse/wait.ani),
+    default;
+}
+
