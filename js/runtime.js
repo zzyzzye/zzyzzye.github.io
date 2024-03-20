@@ -1,5 +1,4 @@
 // 移除了之前对全局变量 'now' 的修改，改用直接获取当前时间的方式
-
 function createtime() {
     var now = new Date(); // 直接获取当前时间
     var start = new Date("01/26/2024 00:00:00");

@@ -8,8 +8,9 @@ $.ajax({
     },
     dataType: 'jsonp',
     success: function (res) {
-        console.log(res)
+
         ipLoacation = res;
+        showWelcome()
     }
 })
 function getDistance(e1, n1, e2, n2) {
@@ -29,7 +30,6 @@ function getDistance(e1, n1, e2, n2) {
 }
 
 function showWelcome() {
-
     let dist = getDistance(111.744797, 27.25844, ipLoacation.result.location.lng, ipLoacation.result.location.lat); //这里换成自己的经纬度
     let pos = ipLoacation.result.ad_info.nation;
     let ip;
@@ -212,13 +212,17 @@ function showWelcome() {
     else if (date.getHours() >= 16 && date.getHours() < 19) timeChange = "<span>夕阳无限好！</span>";
     else if (date.getHours() >= 19 && date.getHours() < 24) timeChange = "<span>晚上好</span>，夜生活嗨起来！";
     else timeChange = "夜深了，早点休息，少熬夜。";
+    if (ip.length > 15) {
+        ip = `这个IPv6就像一串口令，记不住`;
+    }
+
 
     try {
-        //自定义文本和需要放的位置
         document.getElementById("welcome-info").innerHTML =
-            `<b><center>🎉 欢迎信息 🎉</center>&emsp;&emsp;欢迎来自 <span style="color:var(--theme-color)">${pos}</span> 的小伙伴，${timeChange}您现在距离站长约 <span style="color:var(--theme-color)">${dist}</span> 公里，当前的IP地址为： <span style="color:var(--theme-color)">${ip}</span>， ${posdesc}</b>`;
+        //自定义文本和需要放的位置
+        `<b>欢迎来自 <span>${pos}</span> 的小伙伴<br><br>${timeChange}您现在距离站长约 <span>${dist}</span> 公里<br><br>当前的IP地址为：<br> <span>${ip}</span><br> ${posdesc}</b>`;
     } catch (err) {
-        // console.log("Pjax无法获取#welcome-info元素🙄🙄🙄")
+        console.log("Pjax无法获取#welcome-info元素🙄🙄🙄")
     }
 }
 window.onload = showWelcome;

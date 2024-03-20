@@ -16,11 +16,17 @@
 
 /* 白天模式遮罩透明 */
 #footer::before {
-    background: transparent !important;
+    content: '';
+    background: rgba(0,0,0,0.3) !important;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
 }
 
+
 #page-header::before {
-    background: transparent !important;
+    background: rgba(0,0,0,0.3) !important;
 }
 
 /* 夜间模式遮罩透明 */
@@ -636,12 +642,22 @@ h6::before {
 }
 
 
-/* 欢迎信息 */
-#welcome-info {
-    background: linear-gradient(45deg, #b9f4f3, #e3fbf9);
-    border-radius: 18px;
-    padding: 8px;
+:root {
+    --ichika-color: #49A6E9;
 }
-[data-theme="dark"] #welcome-info {
-    background: #212121;
+
+/* 公告&欢迎页 */
+.card-announcement {
+    line-height:26px;
+    font-size:16px;
+}
+
+.card-announcement .item-headline span{
+    margin-left:0!important;
+}
+
+.card-announcement span{
+    font-weight:bold;
+    font-size:16px!important;
+    color:var(--ichika-color);
 }
