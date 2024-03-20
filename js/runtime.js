@@ -1,20 +1,46 @@
-var now = new Date;
+// 移除了之前对全局变量 'now' 的修改，改用直接获取当前时间的方式
 
 function createtime() {
-    now.setTime(now.getTime() + 1e3);
-    var e = new Date("2024/02/26 00:00:00"), t = Math.trunc(234e8 + (now - e) / 1e3 * 17), a = (t / 1496e5).toFixed(6),
-        o = new Date("2024/02/26 00:00:00"), n = (now - o) / 1e3 / 60 / 60 / 24, r = Math.floor(n),
-        i = (now - o) / 1e3 / 60 / 60 - 24 * r, s = Math.floor(i);
-    1 == String(s).length && (s = "0" + s);
-    var d = (now - o) / 1e3 / 60 - 1440 * r - 60 * s, l = Math.floor(d);
-    1 == String(l).length && (l = "0" + l);
-    var g = (now - o) / 1e3 - 86400 * r - 3600 * s - 60 * l, b = Math.round(g);
-    1 == String(b).length && (b = "0" + b);
-    let c = "";
-    c = s < 18 && s >= 9 ? 18 : 9
-        // `<img class="boardsign" src="https://sourcebucket.s3.bitiful.net/badge/M小屋-下班休息啦.svg" title="下班了就该开开心心地玩耍~"><br> <div style="font-size:13px;font-weight:bold">本站居然运行了 ${r} 天 ${s} 小时 ${l} 分 ${b} 秒 <i id="heartbeat" class='fas fa-heartbeat'></i>` : `<img class='boardsign' src='https://sourcebucket.s3.bitiful.net/badge/F小屋-下班休息啦.svg' title='下班了就该开开心心地玩耍~'><br> <div style="font-size:13px;font-weight:bold">本站已经运行了 ${r} 天 ${s} 小时 ${l} 分 ${b} 秒 <i id="heartbeat" class='fas fa-heartbeat'></i>`, document.getElementById("workboard") && (document.getElementById("workboard").innerHTML = c)
+    var now = new Date(); // 直接获取当前时间
+    var start = new Date("01/26/2024 00:00:00");
+    var dis = Math.trunc(23400000000 + ((now - start) / 1000) * 17);
+    var unit = (dis / 149600000).toFixed(6);
+
+    var grt = new Date("02/26/2024 00:00:00");
+    var days = (now - grt) / 1e3 / 60 / 60 / 24;
+    var dnum = Math.floor(days);
+    var hours = (now - grt) / 1e3 / 60 / 60 - 24 * dnum;
+    var hnum = Math.floor(hours);
+    if (String(hnum).length === 1) {
+        hnum = "0" + hnum;
+    }
+
+    var minutes = (now - grt) / 1e3 / 60 - 1440 * dnum - 60 * hnum;
+    var mnum = Math.floor(minutes);
+    if (String(mnum).length === 1) {
+        mnum = "0" + mnum;
+    }
+
+    var seconds = (now - grt) / 1e3 - 86400 * dnum - 3600 * hnum - 60 * mnum;
+    var snum = Math.floor(seconds);
+    if (String(snum).length === 1) {
+        snum = "0" + snum;
+    }
+
+    let currentTimeHtml = hnum < 18 && hnum >= 9
+        ? `<div style="font-size:13px;font-weight:bold">本站居然运行了 ${dnum} 天 ${hnum} 小时 ${mnum} 分 ${snum} 秒 <i id="heartbeat" class='fas fa-heartbeat'></i></div>`
+        : `<div style="font-size:13px;font-weight:bold">本站居然运行了 ${dnum} 天 ${hnum} 小时 ${mnum} 分 ${snum} 秒 <i id="heartbeat" class='fas fa-heartbeat'></i></div>`;
+
+    // Make sure the 'workboard' element exists before trying to update it
+    if (document.getElementById("workboard")) {
+        document.getElementById("workboard").innerHTML = currentTimeHtml;
+    }
 }
 
-setInterval((() => {
-    createtime()
-}), 1e3);
+// Initialize the display as soon as the script loads
+createtime();
+
+// Then update it every second
+setInterval(() => {
+    createtime();
+}, 1000);
