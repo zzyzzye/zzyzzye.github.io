@@ -212,7 +212,7 @@ function showWelcome() {
     else if (date.getHours() >= 16 && date.getHours() < 19) timeChange = "<span>夕阳无限好！</span>";
     else if (date.getHours() >= 19 && date.getHours() < 24) timeChange = "<span>晚上好</span>，夜生活嗨起来！";
     else timeChange = "夜深了，早点休息，少熬夜。";
-    if (ip.length > 15) {
+    if (ip.length > 20) {
         ip = `这个IPv6就像一串口令，记不住`;
     }
 
