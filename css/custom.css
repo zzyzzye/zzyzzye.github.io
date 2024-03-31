@@ -702,12 +702,39 @@ h6::before {
     border-radius: 20px !important;
 }
 
+[data-theme="dark"] .magnet_item {
+    background-color: transparent !important;
+}
+
+[data-theme="dark"] .magnet_link_context {
+    border-radius: 20px !important;
+}
+
+[data-theme="dark"] .magnet_link_context:hover {
+    background: #031418;
+    color: #1ba9ef !important;
+}
+
+[data-theme="dark"] .magnet_link_more {
+    color: #eefafa !important;
+}
+
+[data-theme="dark"] .magnet_link_more:hover {
+    color: #23a7e8 !important;
+}
 
 /* 磁贴分类图片宽度*/
-.blog-slider__img {
-    width: 350px !important;
-    height: 280px !important;
+@media screen and (min-width: 600px) {
+    .blog-slider__img {
+        width: 350px !important;
+        height: 280px !important;
+    }
+
+    #swiper_container {
+        padding: 0;
+    }
 }
+
 
 @media screen and (min-width: 600px) {
     .blog-slider {
@@ -715,6 +742,3 @@ h6::before {
     }
 }
 
-#swiper_container{
-    padding: 0;
-}
