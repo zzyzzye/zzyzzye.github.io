@@ -4,16 +4,16 @@
   
     
     <entry>
-      <title>Vue 脚手架环境常见问题</title>
-      <link href="/posts/c18a3c75.html"/>
-      <url>/posts/c18a3c75.html</url>
+      <title>Js模块化知识</title>
+      <link href="/posts/7c5c2ad1.html"/>
+      <url>/posts/7c5c2ad1.html</url>
       
         <content type="html"><![CDATA[<h1 id="Q1-export-导出是什么？"><a href="#Q1-export-导出是什么？" class="headerlink" title="Q1: export 导出是什么？"></a>Q1: <code>export</code> 导出是什么？</h1><p>在 <code>JavaScript</code> 中，<code>export</code> 是用来导出模块的语法。通过 <code>export</code> 关键字，<br>我们可以将变量、函数、类等定义导出，以便其他模块可以引入并使用这些导出的内容。<br>在 <code>ES6</code> 中，<code>export</code> 关键字有多种用法，常用的包括：</p><hr><h2 id="命名导出-Named-Exports"><a href="#命名导出-Named-Exports" class="headerlink" title="命名导出 (Named Exports):"></a>命名导出 (Named Exports):</h2><p>通过 <code>export</code> 关键字导出一个或多个变量、函数或类。<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">export</span> <span class="keyword">const</span> name = <span class="string">&#x27;Alice&#x27;</span>;</span><br><span class="line"><span class="keyword">export</span> <span class="keyword">function</span> <span class="title function_">sayHello</span>(<span class="params"></span>) &#123;</span><br><span class="line">  <span class="keyword">return</span> <span class="string">&#x27;Hello!&#x27;</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p><h2 id="默认导出-Default-Export"><a href="#默认导出-Default-Export" class="headerlink" title="默认导出 (Default Export):"></a>默认导出 (Default Export):</h2><p>使用 <code>export default</code> 关键字导出一个默认的变量、函数或类。<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> name = <span class="string">&#x27;Bob&#x27;</span>;</span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> name;</span><br></pre></td></tr></table></figure></p><h2 id="导出整个模块-Re-exporting"><a href="#导出整个模块-Re-exporting" class="headerlink" title="导出整个模块 (Re-exporting):"></a>导出整个模块 (Re-exporting):</h2><p>在一个模块中重新导出另一个模块的内容。<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">export</span> &#123; name <span class="keyword">as</span> newName &#125; <span class="keyword">from</span> <span class="string">&#x27;./module&#x27;</span>;</span><br></pre></td></tr></table></figure></p><h2 id="其他模块导入"><a href="#其他模块导入" class="headerlink" title="其他模块导入"></a>其他模块导入</h2><p>在其他模块中导入导出的内容。<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> &#123; name, sayHello <span class="keyword">as</span> hay &#125; <span class="keyword">from</span> <span class="string">&#x27;./module&#x27;</span>; <span class="comment">// 命名导入</span></span><br><span class="line"><span class="keyword">import</span> newName <span class="keyword">from</span> <span class="string">&#x27;./module&#x27;</span>; <span class="comment">// 默认导入</span></span><br></pre></td></tr></table></figure></p><hr><h1 id="Q2-vue-cli导出"><a href="#Q2-vue-cli导出" class="headerlink" title="Q2: vue-cli导出"></a>Q2: <code>vue-cli</code>导出</h1><h2 id="问题一"><a href="#问题一" class="headerlink" title="问题一:"></a>问题一:</h2><p><strong>在<code>vue-cli</code>中，我创建了一个名为<code>requests</code>的<code>js</code>文件，比如我在里面定义了一个<code>axios</code>实例，我怎么导出呢？</strong><br><details class="folding-tag" ><summary> 示例代码 </summary>              <div class='content'>              <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> axios <span class="keyword">from</span> <span class="string">&#x27;axios&#x27;</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> instance = axios.<span class="title function_">create</span>(&#123;</span><br><span class="line">    <span class="attr">baseURL</span>: <span class="string">&#x27;http://127.0.0.1&#x27;</span>,</span><br><span class="line">    <span class="attr">timeout</span>: <span class="number">5000</span></span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>              </div>            </details></p><p><strong>问题解答</strong>:<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> axios <span class="keyword">from</span> <span class="string">&#x27;axios&#x27;</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> instance = axios.<span class="title function_">create</span>(&#123;</span><br><span class="line">    <span class="attr">baseURL</span>: <span class="string">&#x27;http://127.0.0.1&#x27;</span>,</span><br><span class="line">    <span class="attr">timeout</span>: <span class="number">5000</span></span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> instance;</span><br></pre></td></tr></table></figure></p><p>通过这样的写法，你就可以在其他文件中使用import语句导入该axios实例，如下所示：<br>(当然，<code>requests</code>可以起任何名字)<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> requests <span class="keyword">from</span> <span class="string">&#x27;./requests&#x27;</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 现在可以使用requests这个axios实例来发送请求</span></span><br><span class="line">requests.<span class="title function_">get</span>(<span class="string">&#x27;/some-api-endpoint&#x27;</span>)</span><br><span class="line">    .<span class="title function_">then</span>(<span class="function"><span class="params">response</span> =&gt;</span> &#123;</span><br><span class="line">        <span class="comment">// 处理响应</span></span><br><span class="line">    &#125;)</span><br><span class="line">    .<span class="title function_">catch</span>(<span class="function"><span class="params">error</span> =&gt;</span> &#123;</span><br><span class="line">        <span class="comment">// 处理错误</span></span><br><span class="line">    &#125;);</span><br></pre></td></tr></table></figure></p><h2 id="问题二"><a href="#问题二" class="headerlink" title="问题二:"></a>问题二:</h2><p><strong>如果那么我如果<code>js</code>文件里面的代码 直接是<code>export default &#123;省略代码&#125;</code> 会怎么样？</strong></p><p><strong>问题解答</strong>:<br>当一个<code>JavaScript</code>文件中使用<code>export default &#123; ... &#125;</code>语法时，表示将整个对象作为默认导出导出出去，相当于把这个对象作为整体导出。其他文件在导入这个文件时，可以直接得到这个对象，相当于将整个文件的内容作为一个整体导出。</p><p>因此，你可以认为<code>export default &#123; ... &#125;</code>将整个文件的代码打包成一个对象，并导出这个对象供其他文件使用。其他文件在导入时可以直接操作这个对象，访问其属性和方法，以便使用文件中定义的功能。</p>]]></content>
       
       
       <categories>
           
-          <category> Vue </category>
+          <category> JavaScript </category>
           
       </categories>
       
@@ -426,6 +426,31 @@
     
     
     <entry>
+      <title>MySQL8.0安装</title>
+      <link href="/posts/1b7a1921.html"/>
+      <url>/posts/1b7a1921.html</url>
+      
+        <content type="html"><![CDATA[<h2 id="MySQL下载"><a href="#MySQL下载" class="headerlink" title="MySQL下载"></a>MySQL下载</h2><ul><li>首先确认自己的操作系统是64位还是32位。</li></ul><ol><li><p>首先<a href="https://dev.mysql.com/downloads/">访问官网</a>下载MySQL服务。<br><img src="/assets/md_img/mysql下载png.png"></p></li><li><p>选择MySQL版本<br><img src="/assets/md_img/mysql版本.png"></p><div class="note info flat"><p>我现在的版本是 8.3.0 ，所以本文选择<strong><code>MySQL 8.3.0</code></strong></p></div></li><li><p>点击<strong><code>No thanks, just start my download.</code></strong>以跳过注册流程直接下载</p></li></ol><h2 id="MySQL安装"><a href="#MySQL安装" class="headerlink" title="MySQL安装"></a>MySQL安装</h2><ol><li><p>找到下载好的安装包文件目录并点击</p></li><li><p>开始安装</p></li><li><p>进入页面后选择最后一个自定义选项之后点击next</p></li></ol>]]></content>
+      
+      
+      <categories>
+          
+          <category> 数据库 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> MySQL </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>Vue-cli 安装流程</title>
       <link href="/posts/4afe322b.html"/>
       <url>/posts/4afe322b.html</url>
@@ -464,31 +489,6 @@
           
       </categories>
       
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>MySQL8.0安装</title>
-      <link href="/posts/1b7a1921.html"/>
-      <url>/posts/1b7a1921.html</url>
-      
-        <content type="html"><![CDATA[<h2 id="MySQL下载"><a href="#MySQL下载" class="headerlink" title="MySQL下载"></a>MySQL下载</h2><ul><li>首先确认自己的操作系统是64位还是32位。</li></ul><ol><li><p>首先<a href="https://dev.mysql.com/downloads/">访问官网</a>下载MySQL服务。<br><img src="/assets/md_img/mysql下载png.png"></p></li><li><p>选择MySQL版本<br><img src="/assets/md_img/mysql版本.png"></p><div class="note info flat"><p>我现在的版本是 8.3.0 ，所以本文选择<strong><code>MySQL 8.3.0</code></strong></p></div></li><li><p>点击<strong><code>No thanks, just start my download.</code></strong>以跳过注册流程直接下载</p></li></ol><h2 id="MySQL安装"><a href="#MySQL安装" class="headerlink" title="MySQL安装"></a>MySQL安装</h2><ol><li><p>找到下载好的安装包文件目录并点击</p></li><li><p>开始安装</p></li><li><p>进入页面后选择最后一个自定义选项之后点击next</p></li></ol>]]></content>
-      
-      
-      <categories>
-          
-          <category> 数据库 </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> MySQL </tag>
-            
-        </tags>
       
     </entry>
     
