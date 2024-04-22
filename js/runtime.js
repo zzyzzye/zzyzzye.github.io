@@ -27,8 +27,8 @@ function createtime() {
     }
 
     let currentTimeHtml = hnum < 18 && hnum >= 9
-        ? `<div style="font-size:13px;font-weight:bold">本站居然运行了 ${dnum} 天 ${hnum} 小时 ${mnum} 分 ${snum} 秒 <i id="heartbeat" class='fas fa-heartbeat'></i></div>`
-        : `<div style="font-size:13px;font-weight:bold">本站居然运行了 ${dnum} 天 ${hnum} 小时 ${mnum} 分 ${snum} 秒 <i id="heartbeat" class='fas fa-heartbeat'></i></div>`;
+        ? `<div style="font-size:13px;font-weight:bold">本博客已经运行了 ${dnum} 天 ${hnum} 小时 ${mnum} 分 ${snum} 秒 <i id="heartbeat" class='fas fa-heartbeat'></i></div>`
+        : `<div style="font-size:13px;font-weight:bold">本博客已经运行了 ${dnum} 天 ${hnum} 小时 ${mnum} 分 ${snum} 秒 <i id="heartbeat" class='fas fa-heartbeat'></i></div>`;
 
     // Make sure the 'workboard' element exists before trying to update it
     if (document.getElementById("workboard")) {
