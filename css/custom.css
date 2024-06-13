@@ -508,12 +508,11 @@ h6::before {
 
 #site-name {
     position: relative;
-    font-size: 24px; /*一定要把字体调大点，否则效果惨不忍睹！*/
+    font-size: 24px;
 }
 
 /*
-2022.10.4更新：
-根据我发现的没有自适应，间距不合理问题进行调整，如果用了这个的朋友们建议改一改
+
 */
 #page-name::before {
     font-size: 18px;
