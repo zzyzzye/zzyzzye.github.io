@@ -573,7 +573,7 @@ h6::before {
     background: linear-gradient(45deg, #b9f4f3, #e3fbf9);
     border-radius: 18px;
     padding: 8px;
-    white-space: nowrap;
+    word-wrap: break-word;
 }
 
 [data-theme="dark"] #welcome-info {
