@@ -1513,7 +1513,7 @@ input::placeholder {
   z-index: -999;
   width: 100%;
   height: 100%;
-  background: url(https://pic-bed-ahl.pages.dev/images/light.jpeg);
+  background: url(https://pic-bed-ahl.pages.dev/images/light.webp);
   background-attachment: local;
   background-position: center;
   background-size: cover;
@@ -5252,7 +5252,7 @@ mjx-assistive-mml {
   }
 }
 [data-theme="dark"] #web_bg {
-  background: url(https://pic-bed-ahl.pages.dev/images/down.jpeg);
+  background: url(https://pic-bed-ahl.pages.dev/images/down.webp);
   background-attachment: local;
   background-position: center;
   background-size: cover;
@@ -5260,14 +5260,14 @@ mjx-assistive-mml {
 }
 @media screen and (max-width: 800px) {
   #web_bg {
-    background: url(https://pic-bed-ahl.pages.dev/images/light.jpeg) !important;
+    background: url(https://pic-bed-ahl.pages.dev/images/light.webp) !important;
     background-attachment: local !important;
     background-position: center !important;
     background-size: cover !important;
     background-repeat: no-repeat !important;
   }
   [data-theme="dark"] #web_bg {
-    background: url(https://pic-bed-ahl.pages.dev/images/down.jpeg) !important;
+    background: url(https://pic-bed-ahl.pages.dev/images/down.webp) !important;
     background-attachment: local !important;
     background-position: center !important;
     background-size: cover !important;
