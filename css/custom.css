@@ -754,3 +754,14 @@ h6::before {
 #nav .site-page:not(.child):after {
     background-color: #2382e5 !important;
 }
+
+
+/* 文章布局字体图标样式 */
+.article-meta-separator {
+    margin-left: 7px;
+    margin-right: 10px;
+}
+
+.recent-post-info i {
+    margin-right: 7px;
+}
