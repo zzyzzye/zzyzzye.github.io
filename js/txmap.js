@@ -145,7 +145,47 @@ function showWelcome() {
                     posdesc = "来碗热干面！";
                     break;
                 case "湖南省":
-                    posdesc = "74751，长沙斯塔克。";
+                    switch (ipLoacation.result.ad_info.city) {
+                        case "长沙市":
+                            posdesc = "星城夜色美如画，橘子洲头赏烟花。";
+                            break;
+                        case "株洲市":
+                            posdesc = "火车拉来的城市，工业繁荣映湘江。";
+                            break;
+                        case "湘潭市":
+                            posdesc = "伟人故里，红色圣地，湘潭情深意长。";
+                            break;
+                        case "衡阳市":
+                            posdesc = "雁城衡山秀，南岳衡山祈福地。";
+                            break;
+                        case "邵阳市":
+                            posdesc = "邵阳山水美，崀山丹霞奇。";
+                            break;
+                        case "岳阳市":
+                            posdesc = "洞庭湖畔岳阳楼，千古名楼美名扬。";
+                            break;
+                        case "常德市":
+                            posdesc = "常德米粉香，桃花源里好风光。";
+                            break;
+                        case "张家界市":
+                            posdesc = "张家界奇峰三千，水绕四门美如画。";
+                            break;
+                        case "益阳市":
+                            posdesc = "洞庭湖畔益阳城，鱼米之乡美名传。";
+                            break;
+                        case "郴州市":
+                            posdesc = "郴州温泉暖人心，莽山巍峨入云霄。";
+                            break;
+                        case "永州市":
+                            posdesc = "永州八景美名扬，柳宗元赋永州记。";
+                            break;
+                        case "怀化市":
+                            posdesc = "怀化古韵浓，洪江古商城岁月长。";
+                            break;
+                        case "娄底市":
+                            posdesc = "娄底山水秀，梅山文化传千年。";
+                            break;
+                    }
                     break;
                 case "广东省":
                     posdesc = "老板来两斤福建人。";
