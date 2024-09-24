@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>Linux常用命令</title>
+      <link href="/posts/d0edc1ed.html"/>
+      <url>/posts/d0edc1ed.html</url>
+      
+        <content type="html"><![CDATA[<h1 id="指令"><a href="#指令" class="headerlink" title="指令"></a>指令</h1><h2 id="1-怎么前进或后退文件目录？"><a href="#1-怎么前进或后退文件目录？" class="headerlink" title="1. 怎么前进或后退文件目录？"></a>1. 怎么前进或后退文件目录？</h2><p><code>cd</code>（change directory）命令用于切换目录，常用用法包括：</p><ol><li><strong>进入子目录：</strong> <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span> 子目录名</span><br><span class="line"><span class="built_in">cd</span> demo  <span class="comment"># 进入demo目录</span></span><br></pre></td></tr></table></figure></li><li><p><strong>返回上一级目录：</strong></p> <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span> ..</span><br></pre></td></tr></table></figure></li><li><p><strong>返回根目录：</strong></p> <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span> /   <span class="comment"># 切换到文件系统的根目录</span></span><br></pre></td></tr></table></figure></li><li><p><strong>返回用户主目录：</strong></p> <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span> ~ 或仅输入 <span class="built_in">cd</span>  <span class="comment"># 只输入 cd 命令会将你切换到当前用户的主目录</span></span><br></pre></td></tr></table></figure></li><li><p><strong>切换到之前的目录：</strong></p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span> -  </span><br></pre></td></tr></table></figure></li><li><p><strong>使用绝对路径：</strong></p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span> /path/to/directory</span><br><span class="line"><span class="built_in">cd</span> /usr/local/    <span class="comment"># 切换到usr下面的local目录</span></span><br></pre></td></tr></table></figure></li><li><p><strong>使用相对路径：</strong></p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span> ../another_directory</span><br><span class="line"><span class="comment"># 假设你当前在 /home/user/docs 目录下：</span></span><br><span class="line"><span class="comment"># 执行 cd .. 会回到 /home/user。</span></span><br><span class="line"><span class="comment"># 执行 cd ../downloads 会切换到 /home/user/downloads 目录（前提是该目录存在）</span></span><br></pre></td></tr></table></figure></li></ol><hr><h2 id="2-文本编辑，浏览-用什么命令？"><a href="#2-文本编辑，浏览-用什么命令？" class="headerlink" title="2.文本编辑，浏览..用什么命令？"></a>2.文本编辑，浏览..用什么命令？</h2><p>在文本编辑器（如 <code>vi</code> 或 <code>vim</code>）中，使用以下命令浏览上一级目录：</p><h3 id="2-1-下面介绍文本编辑器的命令"><a href="#2-1-下面介绍文本编辑器的命令" class="headerlink" title="2.1 下面介绍文本编辑器的命令"></a>2.1 下面介绍文本编辑器的命令</h3><ul><li><p><strong>进入编辑模式</strong><br><code>i</code>：在光标前插入<br><code>I</code>：在行首插入<br><code>a</code>：在光标后追加<br><code>A</code>：在行尾追加<br><code>o</code>：在当前行下插入新行<br><code>O</code>：在当前行上插入新行</p></li><li><p><strong>保存和退出</strong><br><code>:w</code>：保存文件<br><code>:q</code>：退出<br><code>:wq</code>：保存并退出<br><code>:q!</code>：强制退出，不保存</p></li><li><p><strong>导航</strong><br><code>h</code>：左移<br><code>j</code>：下移<br><code>k</code>：上移<br><code>l</code>：右移<br><code>gg</code>：跳到文件开头<br><code>G</code>：跳到文件结尾<br><code>0</code>：跳到行首<br><code>$</code>：跳到行尾</p></li><li><p><strong>删除和复制</strong><br><code>x</code>：删除光标所在字符<br><code>dd</code>：删除整行<br><code>yy</code>：复制整行<br><code>p</code>：粘贴</p></li><li><p><strong>撤销和重做</strong><br><code>u</code>：撤销<br><code>Ctrl + r</code>：重做</p></li></ul>]]></content>
+      
+      
+      <categories>
+          
+          <category> Linux </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Linux </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>计算机的数据信息、进制习题</title>
       <link href="/posts/424ba09f.html"/>
       <url>/posts/424ba09f.html</url>
