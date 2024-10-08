@@ -4,11 +4,36 @@
   
     
     <entry>
+      <title>子网划分</title>
+      <link href="/posts/8244e1bd.html"/>
+      <url>/posts/8244e1bd.html</url>
+      
+        <content type="html"><![CDATA[<h3 id="一、172-16-10-22-所在的网络子网掩码为-255-255-255-240，请计算出该网络的有效IP地址范围。"><a href="#一、172-16-10-22-所在的网络子网掩码为-255-255-255-240，请计算出该网络的有效IP地址范围。" class="headerlink" title="一、172.16.10.22 所在的网络子网掩码为 255.255.255.240，请计算出该网络的有效IP地址范围。"></a>一、<code>172.16.10.22</code> 所在的网络子网掩码为 <code>255.255.255.240</code>，请计算出该网络的有效IP地址范围。</h3><p>要计算 <code>IP</code> 地址 <code>172.16.10.22</code> 在子网掩码 <code>255.255.255.240</code> 下的有效 IP 地址范围，首先需要了解子网掩码的含义。</p><ol><li><p><strong>子网掩码：</strong><code>255.255.255.240</code> 对应的二进制形式是 <code>11111111.11111111.11111111.11110000</code>，这表示有 28 位用于网络部分，4 位用于主机部分。</p></li><li><p><strong>计算子网：</strong></p><ul><li>网络地址：将 IP 地址和子网掩码进行按位与运算。</li><li><code>172.16.10.22</code> 的二进制形式是：<figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">172: 10101100</span><br><span class="line">16:  00010000</span><br><span class="line">10:  00001010</span><br><span class="line">22:  00010110</span><br></pre></td></tr></table></figure></li><li>结合子网掩码：<figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">172.16.10.22:    10101100.00010000.00001010.00010110</span><br><span class="line">255.255.255.240: 11111111.11111111.11111111.11110000</span><br><span class="line">-----------------------------------------------------</span><br><span class="line">网络地址:         10101100.00010000.00001010.00010000 (172.16.10.16)</span><br></pre></td></tr></table></figure></li></ul></li><li><p><strong>计算广播地址：</strong></p><ul><li>广播地址是在主机部分全为 1 的情况下：<figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">172.16.10.16:   10101100.00010000.00001010.00010000</span><br><span class="line">主机部分全为1:  00001111</span><br><span class="line">-----------------------------------------------------</span><br><span class="line">广播地址:      10101100.00010000.00001010.00011111 (172.16.10.31)</span><br></pre></td></tr></table></figure></li></ul></li><li><p><strong>有效 IP 地址范围：</strong></p><ul><li>有效 IP 地址范围是从网络地址加 1 到广播地址减 1：<ul><li>最小有效地址：<code>172.16.10.17</code></li><li>最大有效地址：<code>172.16.10.30</code></li></ul></li></ul></li></ol><div class="tip key"><p>因此，172.16.10.22 所在网络的有效 IP 地址范围是 172.16.10.17 到 172.16.10.30。</p></div>]]></content>
+      
+      
+      <categories>
+          
+          <category> 计算机网络 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 计算机网络 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>计算机组成原理微课版课后答案</title>
       <link href="/posts/63ee297d.html"/>
       <url>/posts/63ee297d.html</url>
       
-        <content type="html"><![CDATA[<div class="hbe hbe-container" id="hexo-blog-encrypt" data-wpm="抱歉，这个密码看着不太对，请再试试。" data-whm="抱歉，这个文章不能被纠正，不过您还是能看看解密后的内容。">  <script id="hbeData" type="hbeData" data-hmacdigest="ee2c28ebfebf8dcfe4a5a9c05688b89807edb5ef7dd723e0e096d9837b67ae11">519777db3023bef2a93bf30fd73587649243778daa3fc078d0ebcb567090a5c3a3b73de7c603faec754d69e49e01f735b9383d2bc72b48b433151a91aeb22208c65da6ea10b96a6fb557101fb7b8a9fb659eb036d3bb95adaa4ee008ca1c0cba1e893adb6b62bf2e3788d8e19687988391d5dc5d171b7cfc7e4b46281b7f3f6b71a04d8127100d95aeb2a7ca8569f45bf923be3fb192d5cd4b357223e6eccf074f2413af2ebd209508c68afa2230308e8a9cbc76fb2a2a3a8f8b148388e54f0577a4f043b6c4de71ebd82ca859cfb0b962b541c8db036a19ce9a94e07613a5bfd2305bd8568d0073af2c1a26c089017506804d63487833d21b2333e725e540e9919bb4f51e1ba29e4d17c303b01c00359255b97c74bdd89c466d49826add66476f01c21696ef39f03992e2ccef428f900f3c17f52da51c0b7a946365e30aa4a4dbd01e9a9c19a47359f35bfb0eb94ea18f09b4ab94ea50996c362ab2cbbf848eda29ff90882d0184c902085357a874a15a6ad03e8b28e86bae32d2a508780ab82467fe5461b6d8626b4ba3aa4f44993781d10c0b0529bb835445ed94e747cd134f1272484a6e10f987c835fe253404145dd0cda51aa33630872af02e0bab8cee8c7c1076072772c819c1c036570256f163905c1ab1e621574101c179b97114a7</script>  <div class="hbe hbe-content">    <div class="hbe hbe-input hbe-input-up">      <input class="hbe hbe-input-field hbe-input-field-up" type="password" id="hbePass">      <label class="hbe hbe-input-label hbe-input-label-up" for="hbePass">        <span class="hbe hbe-input-label-content hbe-input-label-content-up">本文章里有加密内容，需要输入密码查看哦。</span>      </label>    </div>  </div></div><script data-pjax src="/lib/hbe.js"></script><link href="/css/hbe.style.css" rel="stylesheet" type="text/css">]]></content>
+        <content type="html"><![CDATA[<div class="hbe hbe-container" id="hexo-blog-encrypt" data-wpm="抱歉，这个密码看着不太对，请再试试。" data-whm="抱歉，这个文章不能被纠正，不过您还是能看看解密后的内容。">  <script id="hbeData" type="hbeData" data-hmacdigest="8b40a90ead0d8b911ca3693fc7f59752e5c153c5d4fc63e6ab3c985ceaebe400">519777db3023bef2a93bf30fd73587649243778daa3fc078d0ebcb567090a5c3a3b73de7c603faec754d69e49e01f735b9383d2bc72b48b433151a91aeb22208c65da6ea10b96a6fb557101fb7b8a9fb659eb036d3bb95adaa4ee008ca1c0cba1e893adb6b62bf2e3788d8e19687988391d5dc5d171b7cfc7e4b46281b7f3f6b71a04d8127100d95aeb2a7ca8569f45bf923be3fb192d5cd4b357223e6eccf074f2413af2ebd209508c68afa2230308e1165f6eb95cabbbb1f23f30842d88c9a</script>  <div class="hbe hbe-content">    <div class="hbe hbe-input hbe-input-up">      <input class="hbe hbe-input-field hbe-input-field-up" type="password" id="hbePass">      <label class="hbe hbe-input-label hbe-input-label-up" for="hbePass">        <span class="hbe hbe-input-label-content hbe-input-label-content-up">本文章里有加密内容，需要输入密码查看哦。</span>      </label>    </div>  </div></div><script data-pjax src="/lib/hbe.js"></script><link href="/css/hbe.style.css" rel="stylesheet" type="text/css">]]></content>
       
       
       <categories>
