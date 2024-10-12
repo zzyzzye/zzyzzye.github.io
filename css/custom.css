@@ -57,7 +57,7 @@
     font-family: 'zzy';
     /* 字体名自定义即可 */
     /*src: url('../font/AlibabaHealthFont2.0CN-85B.ttf');*/
-    src: url('https://sourcebucket.s3.bitiful.net/fonts/ZhuZiAWan2.woff2');
+    /*src: url('https://sourcebucket.s3.bitiful.net/fonts/ZhuZiAWan2.woff2');*/
     /* 字体文件路径 */
     font-display: swap;
 }
